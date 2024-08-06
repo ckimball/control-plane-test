@@ -46,7 +46,7 @@ spec:
             - '$values/clusters/{{.name}}/addons/kyverno.yaml'
         
         # Helm valueFiles source.
-        - repoURL: 'https://github.com/akuity-cluster-addons-workshop/control-plane'
+        - repoURL: 'https://github.com/ckimball/control-plane-test'
           targetRevision: 'HEAD'
           ref: values
       destination:

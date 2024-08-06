@@ -8,7 +8,7 @@ spec:
     namespace: argocd
   source:
     path: bootstrap/
-    repoURL: 'https://github.com/akuity-cluster-addons-workshop/control-plane'
+    repoURL: 'https://github.com/ckimball/control-plane-test'
     targetRevision: HEAD
     directory: {}
   project: default
