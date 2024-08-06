@@ -1,0 +1,30 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/kubernetes-helm-minikube
+{
+	"name": "workshop-environment",
+	
+	"image": "quay.io/akuity/argo-cd-learning-assets/akuity-devcontainer:0.2.2",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"enableNonRootDocker": "true",
+			"moby": "true"
+		}
+	},
+	
+	"hostRequirements": {
+		"cpus": 2
+	},
+	
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "/bin/bash -c .devcontainer/post-create.sh",
+	
+	// Use 'postStartCommand' to run commands after the container is created like starting minikube.
+	"postStartCommand": "/bin/bash -c .devcontainer/post-start.sh",
+	
+	"remoteEnv": {
+		"AKUITY_SERVER_URL": "https://training.akuity.cloud"
+	}
+}
